@@ -7,6 +7,12 @@ function add(n1: number, n2: number, showResult: boolean): number {
     }
 }
 
+function printResult (num: number): void {
+    console.log("Result", num)
+};
+
+printResult(add(2, 3, true));
+
 function combine(
     n1: Combineable, 
     n2: Combineable, 
