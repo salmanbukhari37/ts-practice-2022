@@ -33,6 +33,15 @@ function combine(
     return result;
 } 
 
+function addAndHandler ( a: number, b: number, cb: (num: number) => void ): void {
+    const result = a+b;
+    cb(result);
+}
+
+addAndHandler(22, 3, (result) => {
+    console.log("cb result:", result);
+})
+
 console.log(combine(2, 2, 'as-number'))
 
 const num1 = 2.3;
