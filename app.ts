@@ -1,5 +1,6 @@
 type Combineable = number | string;
 type conversionType = 'as-text' | 'as-number';
+let combinedValue: (a: number, b: number, c: boolean) => number;
 
 function add(n1: number, n2: number, showResult: boolean): number {
     if (showResult) {
@@ -11,7 +12,11 @@ function printResult (num: number): void {
     console.log("Result", num)
 };
 
-printResult(add(2, 3, true));
+
+combinedValue = add;
+// combinedValue = printResult;
+
+printResult(combinedValue(2, 3, true));
 
 function combine(
     n1: Combineable, 
